@@ -17,14 +17,89 @@
   <ion-list>
 
     <ion-item>
-      <ion-label fixed>Name</ion-label>
+      <ion-label fixed>Name </ion-label>
       <ion-input type="text" value=""></ion-input>
     </ion-item>
-  
+
+
     <ion-item>
-      <ion-label fixed>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-label>Birthday</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myBirthday"></ion-datetime>
     </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Height Feet </ion-label>
+      <ion-input type="number" value="" [(ngModel)]="myHeight"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Height Inches </ion-label>
+      <ion-input type="number" value="" [(ngModel)]="myHeight"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Weight </ion-label>
+      <ion-input type="number" value="" [(ngModel)]="myWeight"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label> Birth Control</ion-label>
+      <ion-toggle  checked="false"></ion-toggle>
+    </ion-item>
+
+    <ion-card>
+      <ion-card-header>
+        My Tracking
+      </ion-card-header>
+    
+      <ion-list>
+        <button ion-item (click)="showMenstrual()">
+          <ion-icon name="menstural" item-start></ion-icon>
+          Menstrual Cycle
+        </button>
+        <div *ngIf="showMens"> <!-- Add ng-show for here -->
+          <ion-item>
+            <ion-label>Flow</ion-label>
+            <ion-toggle  checked="false"></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label>Mood</ion-label>
+            <ion-toggle  checked="false"></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label>Cravings</ion-label>
+            <ion-toggle  checked="false"></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label>Cramps</ion-label>
+            <ion-toggle  checked="false"></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label>Sleep</ion-label>
+            <ion-toggle  checked="false"></ion-toggle>
+          </ion-item>
+        </div>
+        <button ion-item>
+          <ion-icon name="nutrtion" item-start></ion-icon>
+          Nutrition
+        </button>
+        <div><!-- Add ng-show toggle -->
+          <ion-item>
+            <ion-label>Food</ion-label>
+            <ion-toggle  checked="false"></ion-toggle>
+          </ion-item>
+        </div>
+        <button ion-item>
+          <ion-icon name="fitness" item-start></ion-icon>
+          Fitness
+        </button>
+        <div><!-- Add ng-show to show toggles -->
+          <ion-item>
+            <ion-label>Activity</ion-label>
+            <ion-toggle  checked="false"></ion-toggle>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>    
   
   </ion-list>
 </ion-content>
