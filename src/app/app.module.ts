@@ -10,17 +10,21 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { ProfilePage } from '../pages/profile/profile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { UserProvider } from '../providers/user/user';
 import { DayDataProvider } from '../providers/day-data/day-data';
 
+
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { DayDataProvider } from '../providers/day-data/day-data';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,
