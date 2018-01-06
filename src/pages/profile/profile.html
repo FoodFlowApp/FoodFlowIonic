@@ -78,21 +78,21 @@
             <ion-toggle  checked="false"></ion-toggle>
           </ion-item>
         </div>
-        <button ion-item>
+        <button ion-item (click)="showNutrition()">
           <ion-icon name="nutrtion" item-start></ion-icon>
           Nutrition
         </button>
-        <div><!-- Add ng-show toggle -->
+        <div *ngIf="showNut"><!-- Add ng-show toggle -->
           <ion-item>
             <ion-label>Food</ion-label>
             <ion-toggle  checked="false"></ion-toggle>
           </ion-item>
         </div>
-        <button ion-item>
+        <button ion-item (click)="showFitness()">
           <ion-icon name="fitness" item-start></ion-icon>
           Fitness
         </button>
-        <div><!-- Add ng-show to show toggles -->
+        <div *ngIf="showFit"><!-- Add ng-show to show toggles -->
           <ion-item>
             <ion-label>Activity</ion-label>
             <ion-toggle  checked="false"></ion-toggle>

@@ -15,6 +15,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
   showMens = false;
+  showNut = false;
+  showFit = false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -23,8 +26,16 @@ export class ProfilePage {
   }
 
   showMenstrual() {
-    this.showMens = true;
+    this.showMens = !this.showMens;
     console.log('show menstural clicked')
+  }
+
+  showNutrition() {
+    this.showNut = !this.showNut;
+  }
+
+  showFitness() {
+    this.showFit = !this.showFit;
   }
 
 }
